@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="AdvocateOS.Presentation.WPF.Features.Cases.Create.CreateCaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel Margin="24" Width="400">
+
+        <TextBlock Text="موضوع پرونده"/>
+        <TextBox Text="{Binding Subject, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Text="خواسته"/>
+        <TextBox Text="{Binding Claim}" />
+
+        <TextBlock Text="دادگاه"/>
+        <TextBox Text="{Binding Court}" />
+
+        <TextBlock Text="شعبه"/>
+        <TextBox Text="{Binding Branch}" />
+
+        <TextBlock Text="قاضی"/>
+        <TextBox Text="{Binding Judge}" />
+
+        <Button Content="ایجاد پرونده"
+                Command="{Binding SaveCommand}"
+                Margin="0,12,0,0"/>
+    </StackPanel>
+
+</UserControl>
